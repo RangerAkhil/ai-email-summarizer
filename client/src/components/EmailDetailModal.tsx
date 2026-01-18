@@ -68,7 +68,7 @@ export default function EmailDetailModal({ open, onClose, email, onResummarize, 
                         <button
                             onClick={onResummarize}
                             disabled={loading}
-                            className="rounded-lg bg-blue-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
+                            className="rounded-lg cursor-pointer bg-blue-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
                         >
                             {isSummarized ? `Re-summarize (${email.summaryCount})` : "Summarize"}
                         </button>

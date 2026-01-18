@@ -68,7 +68,7 @@ export default function Toolbar({
             <div className="flex flex-wrap gap-2 justify-center">
                 <button
                     onClick={onIngest}
-                    className="rounded-lg bg-black px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
+                    className="rounded-lg cursor-pointer bg-black px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
                     disabled={loading || selectedCount > 0}
                 >
                     Ingest Mock
@@ -76,7 +76,7 @@ export default function Toolbar({
 
                 <button
                     onClick={onSummarizeSelected}
-                    className="rounded-lg bg-blue-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
+                    className="rounded-lg cursor-pointer bg-blue-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
                     disabled={selectedCount === 0 || loading}
                 >
                     Summarize ({selectedCount})
@@ -84,7 +84,7 @@ export default function Toolbar({
 
                 <button
                     onClick={onExportSelected}
-                    className="rounded-lg bg-emerald-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
+                    className="rounded-lg cursor-pointer bg-emerald-600 px-3 py-2 text-sm text-white hover:opacity-90 disabled:opacity-50"
                     disabled={selectedCount === 0 || loading}
                 >
                     Export CSV ({selectedCount})
