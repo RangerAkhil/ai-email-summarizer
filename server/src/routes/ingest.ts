@@ -1,20 +1,16 @@
 import { Router } from "express";
-import fs from "fs";
-import path from "path";
 import { db } from "../db/client.js";
 import { emails } from "../schema/db.schema.js";
 import { makeEmailHash } from "../utils/hash.js";
 import { eq } from "drizzle-orm";
 import { MockEmailsSchema } from "../schema/ingest.schema.js";
+import mockEmails from "../data/mockEmails.json" with { type: "json" };
 
 const router = Router();
 
 router.post("/ingest", async (_, res) => {
     try {
-        const mockPath = path.join(process.cwd(), "src", "data", "mockEmails.json");
-        console.log("mockPath", mockPath);
-        const raw = fs.readFileSync(mockPath, "utf-8");
-        const parsed = MockEmailsSchema.parse(JSON.parse(raw));
+        const parsed = MockEmailsSchema.parse(mockEmails);
 
         let inserted = 0;
         let skipped = 0;
