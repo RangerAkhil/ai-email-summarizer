@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { db } from "../db/client.js";
-import { emails } from "../db/schema.js";
+import { emails } from "../schema/db.schema.js";
 import { and, desc, eq, ilike, or, sql, asc, inArray, count } from "drizzle-orm";
 import { openai } from "../ai/openai.js";
 import { summarizePrompt, resummarizePrompt, ALLOWED_CATEGORIES } from "../ai/prompts.js";

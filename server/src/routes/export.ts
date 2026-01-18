@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { db } from "../db/client.js";
-import { emails } from "../db/schema.js";
+import { emails } from "../schema/db.schema.js";
 import { inArray } from "drizzle-orm";
 import { emailsToCsv } from "../utils/csv.js";
 import { ExportSelectedSchema } from "../schema/emails.schema.js";

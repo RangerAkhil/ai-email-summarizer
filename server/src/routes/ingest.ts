@@ -2,7 +2,7 @@ import { Router } from "express";
 import fs from "fs";
 import path from "path";
 import { db } from "../db/client.js";
-import { emails } from "../db/schema.js";
+import { emails } from "../schema/db.schema.js";
 import { makeEmailHash } from "../utils/hash.js";
 import { eq } from "drizzle-orm";
 import { MockEmailsSchema } from "../schema/ingest.schema.js";
